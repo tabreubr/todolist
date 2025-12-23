@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: todolist
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todolist
+    username: myuser
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081
