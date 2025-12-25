@@ -2,6 +2,7 @@ package io.github.tabreubr.todolist.controller;
 
 import io.github.tabreubr.todolist.services.TodoService;
 import io.github.tabreubr.todolist.entities.Todo;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ public class TodoController {
     private final TodoService todoService;
 
     @PostMapping
-    List<Todo> create(@RequestBody Todo todo) {
+    List<Todo> create(@RequestBody @Valid Todo todo) {
         return todoService.create(todo);
     }
 
